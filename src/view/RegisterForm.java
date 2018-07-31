@@ -14,19 +14,21 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import model.Accouts;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RegisterForm extends javax.swing.JFrame {
 
-    private ArrayList<Accouts> listAc;
-    IOfile ioflie;
-    IOfile ioflie2;
+    private ArrayList<Accouts> listAcMember, listAcLeader, listAcAd;
+    IOfile iofileM, iofileL, iofileAd;
 
     public RegisterForm() {
-        ioflie = new IOfile();
-        ioflie2 = new IOfile();
-
-        listAc = new ArrayList<>();
-        listAc = ioflie.readIfo("AccoutsFullInfo.txt");
+        iofileM = new IOfile();
+        iofileL = new IOfile();
+        iofileAd = new IOfile();
+        listAcMember = iofileM.readIfo("AccoutsFullInfo.txt");
+        listAcLeader = iofileL.readIfo("AccoutsLeaderGr.txt");
+        listAcAd = iofileAd.readIfo("AccoutsAd.txt");
         initComponents();
         this.setLocationRelativeTo(null);// center form in the screen
     }
@@ -177,6 +179,12 @@ public class RegisterForm extends javax.swing.JFrame {
         jTextFieldBri.setBackground(new java.awt.Color(108, 122, 137));
         jTextFieldBri.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldBri.setForeground(new java.awt.Color(228, 241, 254));
+        jTextFieldBri.setText("dd-mm-yyyy");
+        jTextFieldBri.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTextFieldBriMouseClicked(evt);
+            }
+        });
         jTextFieldBri.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldBriActionPerformed(evt);
@@ -223,38 +231,38 @@ public class RegisterForm extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addGap(30, 30, 30)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextFieldName, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(38, 38, 38)
-                        .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextFieldUser, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
+                        .addComponent(jTextFieldName, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(26, 26, 26)
-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel9))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldBri, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)))))
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPasswordField2, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                            .addComponent(jTextFieldBri, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(36, 36, 36)
+                        .addGap(30, 30, 30)
                         .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextFieldGmail, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldGmail, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(142, 142, 142)
-                        .addComponent(jLabelRegister)))
+                        .addComponent(jLabelRegister))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(30, 30, 30)
+                                .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(26, 26, 26)
+                                .addComponent(jTextFieldUser, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 72, Short.MAX_VALUE)
@@ -280,13 +288,13 @@ public class RegisterForm extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jTextFieldGmail))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jTextFieldUser, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldUser)
+                    .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jPasswordField1)
+                    .addComponent(jLabel5))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
@@ -301,7 +309,7 @@ public class RegisterForm extends javax.swing.JFrame {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addComponent(jLabelRegister)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addComponent(jLabel11))
         );
 
@@ -361,33 +369,49 @@ public class RegisterForm extends javax.swing.JFrame {
             if (!jPasswordField1.getText().equals(jPasswordField2.getText())) {
                 JOptionPane.showMessageDialog(rootPane, "Passwords are not the same!");
             } else {
-                boolean check = false;
-                for (Accouts ac : listAc) {
-                    check = checkUser(ac.getUser(), jTextFieldUser.getText());
-                    if (check) {
-                        JOptionPane.showMessageDialog(rootPane, "The username already exists!");
-                        return;
+                if (!jTextFieldGmail.getText().matches("\\w+@\\w+\\.\\w+")) {
+                    JOptionPane.showMessageDialog(rootPane, "The gmail format is not correct!");////check format gmail
+                } else {
+                    if (!jTextFieldName.getText().matches("[a-zA-Z ]+")) { ////check format name
+                        JOptionPane.showMessageDialog(rootPane, "The Name format is not correct!");
+                    } else {
+                        if (!jTextFieldBri.getText().matches("[0-9]{2}+[-][0-9]{2}+[-]+[0-9]{4}")) {//check format brithay
+                            JOptionPane.showMessageDialog(rootPane, "The Brithday format í not correct!");
+                        } else { // check username already exists??
+                            boolean check = false;
+                            for (Accouts ac : listAcMember) {
+                                check = checkUser(ac.getUser(), jTextFieldUser.getText());
+                                if (check) {
+                                    JOptionPane.showMessageDialog(rootPane, "The username already exists!");
+                                    return;
 
+                                }
+                            }
+
+                            if (!check) {
+                                listAcMember.add(new Accouts(jTextFieldName.getText(), jTextFieldGmail.getText(), jTextFieldUser.getText(), jPasswordField1.getText(), jTextFieldBri.getText()));
+                                iofileM.writeIfo(listAcMember, "AccoutsFullInfo.txt");
+                                JOptionPane.showMessageDialog(rootPane, "Successful registration!");
+                            }
+                        }
                     }
-
-                }
-                if (!check) {
-                    listAc.add(new Accouts(jTextFieldName.getText(), jTextFieldGmail.getText(), jTextFieldUser.getText(), jPasswordField1.getText(), jTextFieldBri.getText()));
-                    ioflie2.writeIfo(listAc, "AccoutsFullInfo.txt");
-                    JOptionPane.showMessageDialog(rootPane, "Successful registration!");
                 }
             }
         }
     }//GEN-LAST:event_jButtonRegisterMouseClicked
 
 
-    private void jTextFieldBriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBriActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldBriActionPerformed
-
     private void jTextFieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldNameActionPerformed
+
+    private void jTextFieldBriActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBriActionPerformed
+
+    }//GEN-LAST:event_jTextFieldBriActionPerformed
+
+    private void jTextFieldBriMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextFieldBriMouseClicked
+        jTextFieldBri.setText("");
+    }//GEN-LAST:event_jTextFieldBriMouseClicked
 
     /**
      * @param args the command line arguments

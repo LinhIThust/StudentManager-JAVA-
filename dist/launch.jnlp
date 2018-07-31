@@ -11,7 +11,8 @@
     <resources>
         <j2se version="1.8+"/>
         <jar href="QuanLySinhVien.jar" main="true"/>
-    </resources>
+    <jar href="lib/jcalendar-1.4.jar"/>
+</resources>
     <application-desc main-class="view.LoginForm">
     </application-desc>
 </jnlp>
