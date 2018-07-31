@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>StudentManager</title>
+        <vendor>linhcopper</vendor>
+        <homepage href="https://www.facebook.com/linhcopper"/>
+        <description>StudentManager</description>
+        <description kind="short">StudentManager</description>
+    </information>
+    <update check="always"/>
+    <resources>
+        <j2se version="1.8+"/>
+        <jar href="QuanLySinhVien.jar" main="true"/>
+    </resources>
+    <application-desc main-class="view.LoginForm">
+    </application-desc>
+</jnlp>
