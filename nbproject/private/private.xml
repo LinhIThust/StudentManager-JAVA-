@@ -3,7 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/Java_elipse/StudentManager/src/view/RegisterForm.java</file>
+            <file>file:/E:/Java_elipse/StudentManager/src/model/Student.java</file>
+            <file>file:/E:/Java_elipse/StudentManager/src/model/Acctions.java</file>
+            <file>file:/E:/Java_elipse/StudentManager/src/view/LoginForm.java</file>
+            <file>file:/E:/Java_elipse/StudentManager/src/view/MainMember.java</file>
             <file>file:/E:/Java_elipse/StudentManager/src/view/Main.java</file>
         </group>
     </open-files>

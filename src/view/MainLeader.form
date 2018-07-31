@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -66,7 +66,6 @@
                                           <Component id="jTextField1" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
                                           <Component id="jComboBox2" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -106,7 +105,7 @@
                               <Component id="jButton4" min="-2" pref="73" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="74" max="32767" attributes="0"/>
+                      <EmptySpace pref="106" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -397,7 +396,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace min="0" pref="888" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="929" max="32767" attributes="0"/>
                       <Component id="jTextField3" min="-2" pref="172" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -406,7 +405,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jTextField3" min="-2" pref="37" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="595" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="598" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -456,7 +455,7 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="912" max="32767" attributes="0"/>
+                      <EmptySpace pref="953" max="32767" attributes="0"/>
                       <Component id="jButton5" min="-2" pref="117" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
@@ -467,7 +466,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jButton5" min="-2" pref="39" max="-2" attributes="0"/>
-                      <EmptySpace pref="580" max="32767" attributes="0"/>
+                      <EmptySpace pref="583" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -503,8 +502,9 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="panel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="panel2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -521,16 +521,21 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="panel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel2" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+                                  <Component id="panel1" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="34" max="32767" attributes="0"/>
+                          <EmptySpace pref="49" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -541,9 +546,9 @@
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel4" min="-2" pref="47" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
-                          <Component id="panel1" pref="203" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="panel1" pref="180" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -578,12 +583,12 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="checkbox4" alignment="0" pref="300" max="32767" attributes="0"/>
+                                  <Component id="checkbox4" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                           <Component id="checkbox2" alignment="0" max="32767" attributes="0"/>
                                           <Component id="checkbox3" alignment="0" min="-2" pref="177" max="-2" attributes="0"/>
-                                          <Component id="checkbox5" alignment="0" pref="210" max="32767" attributes="0"/>
+                                          <Component id="checkbox5" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -611,16 +616,16 @@
                     <Component class="java.awt.Checkbox" name="checkbox2">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="18" style="0"/>
+                          <Font name="UVN Bay Buom" size="20" style="0"/>
                         </Property>
-                        <Property name="label" type="java.lang.String" value="Hi&#x1ec1;n L&#xe0;nh,T&#x1ed1;t B&#x1ee5;ng"/>
+                        <Property name="label" type="java.lang.String" value="Computer engineering engineer"/>
                         <Property name="state" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                     <Component class="java.awt.Checkbox" name="checkbox3">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="18" style="0"/>
+                          <Font name="UVN Bay Buom" size="20" style="0"/>
                         </Property>
                         <Property name="label" type="java.lang.String" value="07-02-1998"/>
                         <Property name="state" type="boolean" value="true"/>
@@ -629,18 +634,18 @@
                     <Component class="java.awt.Checkbox" name="checkbox4">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="18" style="0"/>
+                          <Font name="UVN Bay Buom" size="20" style="0"/>
                         </Property>
-                        <Property name="label" type="java.lang.String" value="Y&#xea;u Th&#x1b0;&#x1a1;ng gi&#xfa;p &#x111;&#x1ee1; m&#x1ecd;i ng&#x1b0;&#x1edd;i"/>
+                        <Property name="label" type="java.lang.String" value="Enthusiastic &amp; Creative"/>
                         <Property name="state" type="boolean" value="true"/>
                       </Properties>
                     </Component>
                     <Component class="java.awt.Checkbox" name="checkbox5">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Tahoma" size="18" style="0"/>
+                          <Font name="UVN Bay Buom" size="20" style="0"/>
                         </Property>
-                        <Property name="label" type="java.lang.String" value="Qu&#xea; H&#x1b0;&#x1a1;ng Nam &#x110;&#x1ecb;nh"/>
+                        <Property name="label" type="java.lang.String" value="IT_HUST_K61"/>
                         <Property name="state" type="boolean" value="true"/>
                       </Properties>
                     </Component>
@@ -709,7 +714,7 @@
                                       <Component id="jPanel9" alignment="1" max="32767" attributes="0"/>
                                       <Component id="jPanel10" alignment="1" max="32767" attributes="0"/>
                                   </Group>
-                                  <Component id="jPanel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jPanel6" alignment="0" min="-2" pref="521" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="51" max="32767" attributes="0"/>
                           </Group>
@@ -745,8 +750,8 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jButton6" min="-2" pref="91" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jTextField5" pref="411" max="32767" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTextField5" min="-2" pref="439" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
